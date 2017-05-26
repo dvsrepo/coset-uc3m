@@ -1,0 +1,7 @@
+*egg*
+dist
+*.ipynb_checkpoints
+notebooks/.*
+src/__*
+src/utils/__*
+data
