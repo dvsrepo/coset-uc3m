@@ -35,7 +35,7 @@ class RNNClassifier(nn.Module):
 
     def forward(self, input):
         input = self.embed(input)
-        input = F.dropout(input, training=self.training, p=0.2)
+        input = F.dropout(input, training=self.training, p=0.7)
         out, ht = self.rnn(input) #(h0, c0)
         out = self.out(out[-1].view(-1, out.size(2)))
         return out
